@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Scales &amp; Shells | Rare Herpetology Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Work+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#2c160e",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#191c1c",
+                    "on-tertiary-fixed-variant": "#5d4037",
+                    "surface-variant": "#e1e3e2",
+                    "inverse-on-surface": "#f0f1f0",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-primary-container": "#819986",
+                    "tertiary-container": "#3e251d",
+                    "tertiary-fixed": "#ffdbd0",
+                    "on-secondary-fixed": "#241a00",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#745c00",
+                    "secondary-container": "#fed65b",
+                    "surface-container-high": "#e7e8e7",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#d0e9d4",
+                    "on-surface": "#191c1c",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#364c3c",
+                    "tertiary-fixed-dim": "#e7bdb1",
+                    "on-tertiary-container": "#af8a7f",
+                    "secondary": "#735c00",
+                    "tertiary": "#26110a",
+                    "inverse-primary": "#b4cdb8",
+                    "on-secondary-fixed-variant": "#574500",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f9f9f8",
+                    "outline-variant": "#c3c8c1",
+                    "outline": "#737973",
+                    "on-surface-variant": "#434843",
+                    "primary": "#061b0e",
+                    "surface-dim": "#d9dad9",
+                    "on-primary-fixed": "#0b2013",
+                    "surface-container-highest": "#e1e3e2",
+                    "surface": "#f9f9f8",
+                    "secondary-fixed": "#ffe088",
+                    "surface-tint": "#4d6453",
+                    "surface-bright": "#f9f9f8",
+                    "surface-container": "#edeeed",
+                    "primary-fixed-dim": "#b4cdb8",
+                    "surface-container-low": "#f3f4f3",
+                    "inverse-surface": "#2e3131",
+                    "primary-container": "#1b3022"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "48px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "label-sm": ["JetBrains Mono"],
+                    "headline-lg": ["Manrope"],
+                    "body-md": ["Work Sans"],
+                    "data-point": ["JetBrains Mono"],
+                    "body-lg": ["Work Sans"],
+                    "headline-lg-mobile": ["Manrope"],
+                    "display": ["Manrope"],
+                    "headline-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "data-point": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #f9f9f8; color: #191c1c; min-height: 100dvh; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .gallery-item { cursor: zoom-in; }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden pb-16 md:pb-0">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-50 bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline shadow-sm">
+<div class="flex items-center justify-between px-margin-mobile md:px-margin-desktop py-4 w-full">
+<div class="flex items-center gap-4 cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+<h1 class="font-display text-headline-md text-primary tracking-tight">Scales &amp; Shells</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold font-label-sm text-label-sm" href="#">Home</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-sm text-label-sm px-2 py-1" href="#">Gallery</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-sm text-label-sm px-2 py-1" href="#">Market</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-sm text-label-sm px-2 py-1" href="#">Breeding</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:opacity-80" data-icon="search">search</span>
+</div>
+</div>
+</header>
+<main class="w-full">
+<!-- Serpentine Heritage Gallery Carousel -->
+<section class="py-12 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-8 flex justify-between items-end">
+<div>
+<h2 class="font-display text-headline-lg text-primary">Serpentine Heritage</h2>
+<p class="font-body-md text-on-surface-variant">Exploring the world's most exquisite biological masterpieces.</p>
+</div>
+<div class="flex gap-2">
+<button class="w-12 h-12 flex items-center justify-center rounded-full border border-outline-variant hover:bg-surface-container transition-colors" id="gallery-left">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-full border border-outline-variant hover:bg-surface-container transition-colors" id="gallery-right">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory px-margin-mobile md:px-margin-desktop pb-12" id="main-gallery">
+<!-- Banana Piebald -->
+<div class="min-w-[85vw] md:min-w-[400px] snap-center gallery-item group transition-all duration-300" onclick="openModal('https://lh3.googleusercontent.com/aida/AP1WRLt2QulPiq6xnai1IDDL3f5Nd-opx3HvBJS_7T2ru6SJHOAKNKh3F9caCZZ7HGP1YrYXLk6q6pm78Hq1kcrO8SSuDC3xzQhryxRvN6zMa5CWctZf2tjQWepvIg-GVcqwJIwDP7Lbh5_kKS7fXuPtNAPJA6lxOaCJ8a5dhjQnjJueVHGxW7rEBRLFlhVIek7mtAJggVBYwb6g9_DpiWX-Y2shkVjjKByprC_tTxdTud-q8uv7IVzC6pX2HYA', 'Banana Piebald', 'Ball Python')">
+<div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-surface-container">
+<img alt="Banana Piebald" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLt2QulPiq6xnai1IDDL3f5Nd-opx3HvBJS_7T2ru6SJHOAKNKh3F9caCZZ7HGP1YrYXLk6q6pm78Hq1kcrO8SSuDC3xzQhryxRvN6zMa5CWctZf2tjQWepvIg-GVcqwJIwDP7Lbh5_kKS7fXuPtNAPJA6lxOaCJ8a5dhjQnjJueVHGxW7rEBRLFlhVIek7mtAJggVBYwb6g9_DpiWX-Y2shkVjjKByprC_tTxdTud-q8uv7IVzC6pX2HYA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<p class="font-label-sm text-label-sm text-secondary-fixed mb-1 uppercase tracking-widest">Ball Python</p>
+<h3 class="font-display text-headline-md leading-tight">Banana Piebald</h3>
+</div>
+<div class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white bg-black/40 p-2 rounded-full backdrop-blur-sm" data-icon="fullscreen">fullscreen</span>
+</div>
+</div>
+</div>
+<!-- Blue Insularis -->
+<div class="min-w-[85vw] md:min-w-[400px] snap-center gallery-item group transition-all duration-300" onclick="openModal('https://lh3.googleusercontent.com/aida/AP1WRLuRtE21rioiffikHzORLtY0tynguXJUUqwJ0EllfuUDspaY7eOaSbCPLL9_-udlkZMH5Uj6aZcLW5WsjynHsKy3BAIye56DNaTSlDIru7ZcKWvCidjKi5lONt_Xj9qm9P3yR1n8F1rhOZc0Dou4GWB8kr4zc9Hbieg1InaploSvQ7s-dNk6kX-hMJidP68X4eaaZfTJfbLRHkYRDbvhVW8_Agi7r_IWCLis6TZbWzMC5BkInGfvMgLcqw', 'Blue Insularis', 'Indonesian Pit Viper')">
+<div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-surface-container">
+<img alt="Blue Insularis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLuRtE21rioiffikHzORLtY0tynguXJUUqwJ0EllfuUDspaY7eOaSbCPLL9_-udlkZMH5Uj6aZcLW5WsjynHsKy3BAIye56DNaTSlDIru7ZcKWvCidjKi5lONt_Xj9qm9P3yR1n8F1rhOZc0Dou4GWB8kr4zc9Hbieg1InaploSvQ7s-dNk6kX-hMJidP68X4eaaZfTJfbLRHkYRDbvhVW8_Agi7r_IWCLis6TZbWzMC5BkInGfvMgLcqw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<p class="font-label-sm text-label-sm text-secondary-fixed mb-1 uppercase tracking-widest">Indonesian Pit Viper</p>
+<h3 class="font-display text-headline-md leading-tight">Blue Insularis</h3>
+</div>
+<div class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white bg-black/40 p-2 rounded-full backdrop-blur-sm" data-icon="fullscreen">fullscreen</span>
+</div>
+</div>
+</div>
+<!-- Palmetto Corn Snake -->
+<div class="min-w-[85vw] md:min-w-[400px] snap-center gallery-item group transition-all duration-300" onclick="openModal('https://lh3.googleusercontent.com/aida/AP1WRLt72JL0wnNvSJcUMAgi1jWcNZ_I8zHwyU88kEiqq9eAq-nl7GeumzvS3jnr2wtIpTYWyWjfg0Gw5gXfaSNMqs-RS6TUN6VxnCO3MZ7B0Lr9CIFfWIjtMYqrbhtIVfSZCngFwQNrLJKClf2Nqq22f0RobOfk9YK0FFw6UKrjqehTePD5aIyUSKU2KrxktPLIXkij4MfRlM4Xph2ngKT-0S0_bACo4nIRHePrriejrZTFJWzrwIv49n5j1Ho', 'Palmetto Corn Snake', 'Colubrid')">
+<div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-surface-container">
+<img alt="Palmetto Corn Snake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLt72JL0wnNvSJcUMAgi1jWcNZ_I8zHwyU88kEiqq9eAq-nl7GeumzvS3jnr2wtIpTYWyWjfg0Gw5gXfaSNMqs-RS6TUN6VxnCO3MZ7B0Lr9CIFfWIjtMYqrbhtIVfSZCngFwQNrLJKClf2Nqq22f0RobOfk9YK0FFw6UKrjqehTePD5aIyUSKU2KrxktPLIXkij4MfRlM4Xph2ngKT-0S0_bACo4nIRHePrriejrZTFJWzrwIv49n5j1Ho"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<p class="font-label-sm text-label-sm text-secondary-fixed mb-1 uppercase tracking-widest">Colubrid</p>
+<h3 class="font-display text-headline-md leading-tight">Palmetto Corn Snake</h3>
+</div>
+<div class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white bg-black/40 p-2 rounded-full backdrop-blur-sm" data-icon="fullscreen">fullscreen</span>
+</div>
+</div>
+</div>
+<!-- Biak Green Tree Python -->
+<div class="min-w-[85vw] md:min-w-[400px] snap-center gallery-item group transition-all duration-300" onclick="openModal('https://lh3.googleusercontent.com/aida/AP1WRLsVAkx1aT17Myb46pxVeyR0Wf2R7DVy2fA1zZ6JZQL0INmyD8cREXtXGIlNaouCn0dvuMmZN4WiKUisM0k-68Z8ARWyfNBQs9IWVu6xV5YiXHbfpcN0n85TFNUH22sDXZHKAxz6xMqoxIZ9AOdKJR2WnkbT2AdQVHfSSJmJYDDekE2n5dHHdJlPRVdOeosTUkaRcTf7pEQA0N1WGVUTmzFT1zTaauHLH_KlVDuM3A9CTrLD4dDUV31M6Y0', 'Biak Green Tree Python', 'Morelia viridis')">
+<div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-surface-container">
+<img alt="Biak Green Tree Python" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLsVAkx1aT17Myb46pxVeyR0Wf2R7DVy2fA1zZ6JZQL0INmyD8cREXtXGIlNaouCn0dvuMmZN4WiKUisM0k-68Z8ARWyfNBQs9IWVu6xV5YiXHbfpcN0n85TFNUH22sDXZHKAxz6xMqoxIZ9AOdKJR2WnkbT2AdQVHfSSJmJYDDekE2n5dHHdJlPRVdOeosTUkaRcTf7pEQA0N1WGVUTmzFT1zTaauHLH_KlVDuM3A9CTrLD4dDUV31M6Y0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<p class="font-label-sm text-label-sm text-secondary-fixed mb-1 uppercase tracking-widest">Morelia viridis</p>
+<h3 class="font-display text-headline-md leading-tight">Biak Green Tree Python</h3>
+</div>
+<div class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white bg-black/40 p-2 rounded-full backdrop-blur-sm" data-icon="fullscreen">fullscreen</span>
+</div>
+</div>
+</div>
+<!-- Super Arctic Hognose -->
+<div class="min-w-[85vw] md:min-w-[400px] snap-center gallery-item group transition-all duration-300" onclick="openModal('https://lh3.googleusercontent.com/aida/AP1WRLukDUxmO01VlDkAElfEFyayNfJEgaiGy7zLwNNfF4OiK08YKaMUVCgCddeuk_RI0dHWKj9UyTGg796fhDpVB2wZYkHl59gOx-r5tDzgqw5xkufCyycgviaFg3U9-O0cupONz_CPj6kifWqfc0enx22JjHRVjpWsF5zyFRWX8NqtTmnevy3IWtk1KAYu2P-jC7o2OPpc7WEWwjdRCN-RcUv9Zt--unqAI5BZ6RobfeQjrg6CmdiRtrM2KGo', 'Super Arctic Hognose', 'Heterodon nasicus')">
+<div class="relative aspect-[3/4] overflow-hidden rounded-xl bg-surface-container">
+<img alt="Super Arctic Hognose" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLukDUxmO01VlDkAElfEFyayNfJEgaiGy7zLwNNfF4OiK08YKaMUVCgCddeuk_RI0dHWKj9UyTGg796fhDpVB2wZYkHl59gOx-r5tDzgqw5xkufCyycgviaFg3U9-O0cupONz_CPj6kifWqfc0enx22JjHRVjpWsF5zyFRWX8NqtTmnevy3IWtk1KAYu2P-jC7o2OPpc7WEWwjdRCN-RcUv9Zt--unqAI5BZ6RobfeQjrg6CmdiRtrM2KGo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<p class="font-label-sm text-label-sm text-secondary-fixed mb-1 uppercase tracking-widest">Heterodon nasicus</p>
+<h3 class="font-display text-headline-md leading-tight">Super Arctic Hognose</h3>
+</div>
+<div class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white bg-black/40 p-2 rounded-full backdrop-blur-sm" data-icon="fullscreen">fullscreen</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Modal for Expansion -->
+<div class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-md flex flex-col items-center justify-center p-4" id="image-modal">
+<button class="absolute top-8 right-8 text-white p-2 hover:bg-white/10 rounded-full transition-colors" onclick="closeModal()">
+<span class="material-symbols-outlined text-4xl" data-icon="close">close</span>
+</button>
+<div class="max-w-5xl w-full h-full flex flex-col items-center justify-center">
+<img alt="" class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl mb-8" id="modal-image" src=""/>
+<div class="text-center text-white">
+<p class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest mb-2" id="modal-species"></p>
+<h2 class="font-display text-display leading-none" id="modal-name"></h2>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-primary-container text-on-primary-container">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div>
+<h2 class="font-display text-headline-lg text-white mb-6">Scales &amp; Shells</h2>
+<p class="font-body-md text-body-md opacity-80 pr-4">The premier global destination for high-end herpetology, lineage tracking, and ethical trade.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-headline-md mb-2 text-white">Marketplace</h4>
+<a class="font-label-sm text-label-sm opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors" href="#">Snakes for Sale</a>
+<a class="font-label-sm text-label-sm opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors" href="#">Geckos &amp; Lizards</a>
+<a class="font-label-sm text-label-sm opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors" href="#">Turtles &amp; Tortoises</a>
+<a class="font-label-sm text-label-sm opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors" href="#">Equipment</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-headline-md mb-2 text-white">Resources</h4>
+<a class="font-label-sm text-label-sm opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors" href="#">Community Guidelines</a>
+<a class="font-label-sm text-label-sm opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors" href="#">Breeder Directory</a>
+<a class="font-label-sm text-label-sm opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors" href="#">Herpetology Resources</a>
+<a class="font-label-sm text-label-sm opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors" href="#">Shipping Guide</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-headline-md mb-2 text-white">Support</h4>
+<a class="font-label-sm text-label-sm opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors" href="#">Contact Us</a>
+<div class="flex gap-6 mt-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed text-white" data-icon="facebook">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed text-white" data-icon="alternate_email">mail</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed text-white" data-icon="share">share</span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-16 pt-8 border-t border-white/10 text-center">
+<p class="font-label-sm text-label-sm opacity-60 text-white">© 2024 Scales &amp; Shells. All rights reserved.</p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-16 px-2 bg-surface-container-lowest shadow-[0px_-4px_20px_rgba(27,48,34,0.08)] z-50">
+<div class="flex flex-col items-center justify-center text-primary px-4 py-1">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-[10px]">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+<span class="font-label-sm text-[10px]">Gallery</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-label-sm text-[10px]">Market</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-label-sm text-[10px]">Profile</span>
+</div>
+</nav>
+<script>
+        // Gallery Navigation
+        const gallery = document.getElementById('main-gallery');
+        const scrollLeftBtn = document.getElementById('gallery-left');
+        const scrollRightBtn = document.getElementById('gallery-right');
+
+        scrollLeftBtn.onclick = () => gallery.scrollBy({ left: -400, behavior: 'smooth' });
+        scrollRightBtn.onclick = () => gallery.scrollBy({ left: 400, behavior: 'smooth' });
+
+        // Modal Control
+        function openModal(src, name, species) {
+            const modal = document.getElementById('image-modal');
+            document.getElementById('modal-image').src = src;
+            document.getElementById('modal-name').innerText = name;
+            document.getElementById('modal-species').innerText = species;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('image-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Escape key to close modal
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body></html>

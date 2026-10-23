@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Scales &amp; Shells | Snake Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Work+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e1e3e2",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#4d6453",
+                    "surface": "#f9f9f8",
+                    "inverse-primary": "#b4cdb8",
+                    "secondary-fixed": "#ffe088",
+                    "surface-bright": "#f9f9f8",
+                    "tertiary": "#26110a",
+                    "on-primary-fixed-variant": "#364c3c",
+                    "on-secondary-fixed": "#241a00",
+                    "on-background": "#191c1c",
+                    "primary-fixed": "#d0e9d4",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#e7bdb1",
+                    "primary": "#061b0e",
+                    "outline": "#737973",
+                    "outline-variant": "#c3c8c1",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#434843",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#fed65b",
+                    "on-secondary-container": "#745c00",
+                    "surface-container-high": "#e7e8e7",
+                    "surface-container": "#edeeed",
+                    "inverse-surface": "#2e3131",
+                    "secondary-fixed-dim": "#e9c349",
+                    "surface-dim": "#d9dad9",
+                    "tertiary-fixed": "#ffdbd0",
+                    "on-tertiary-fixed": "#2c160e",
+                    "tertiary-container": "#3e251d",
+                    "primary-fixed-dim": "#b4cdb8",
+                    "surface-container-low": "#f3f4f3",
+                    "surface-variant": "#e1e3e2",
+                    "on-tertiary-container": "#af8a7f",
+                    "on-tertiary-fixed-variant": "#5d4037",
+                    "on-surface": "#191c1c",
+                    "inverse-on-surface": "#f0f1f0",
+                    "error": "#ba1a1a",
+                    "secondary": "#735c00",
+                    "primary-container": "#1b3022",
+                    "on-primary-fixed": "#0b2013",
+                    "background": "#f9f9f8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "48px"
+            },
+            "fontFamily": {
+                    "body-md": ["Work Sans"],
+                    "data-point": ["JetBrains Mono"],
+                    "label-sm": ["JetBrains Mono"],
+                    "body-lg": ["Work Sans"],
+                    "headline-lg-mobile": ["Manrope"],
+                    "display": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "headline-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "data-point": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .lineage-connector {
+            background-image: radial-gradient(circle, #e1e3e2 1px, transparent 1px);
+            background-size: 8px 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #061b0e;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-container">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-50 bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between px-margin-mobile md:px-margin-desktop py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="cursor-pointer active:opacity-80 hover:bg-surface-container-high transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+<h1 class="font-display text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight">Scales &amp; Shells</h1>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Home</a>
+<a class="text-primary font-bold transition-colors font-body-md border-b-2 border-primary" href="#">Gallery</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Market</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Profile</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="cursor-pointer active:opacity-80 hover:bg-surface-container-high transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined text-primary">search</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-12">
+<!-- Hero Section: Grid with Large Gallery -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left: Gallery Bento -->
+<div class="lg:col-span-7 grid grid-cols-4 gap-4 h-fit">
+<div class="col-span-4 aspect-[3/2] rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A high-resolution close-up of a rare Emerald Tree Boa, showcasing its vibrant green scales and intricate white markings. The snake is coiled elegantly around a textured dark branch. The lighting is soft and professional, highlighting the metallic sheen of the scales against a deep, moody jungle background. Corporate marketplace style with high-end gallery finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9OF2WbrNmfAN3v54pErAJfhKliLJ9Df2qzFRAlD4kvAsAJ3LoH9ouM2bc09Pd90_B8_TrINqgdhzLMxnivSKm57S0xeJfFrqw3qvrNEc3k6AESck7-9QNZUc3qrn0vexajPUvln5BconNy2402nzi9e-w7RMhshuqlWLpcvMjYB4znfM6Mp9QX9hnl8lb0kgLULqLD7m3IWykULHYMedp3RYFYRvgUk1IpbV6cXtXDuIpbZyFsVBHW87_5DFTI9gfcCYVTM5584c"/>
+</div>
+<div class="col-span-1 aspect-square rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Detailed close-up of the eye and facial pits of a premium green python. The iris is a piercing gold, and the surrounding scales are perfectly focused, showing incredible biological detail. Soft studio lighting on a neutral grey background to emphasize texture and color accuracy for collectors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWADYYpq_vLTzAEdOAwtfxjkPPE2HdlP99hz6Q-krnNe0iB-bygEEYxBu9MObRet0TcCF6HkbY-xHMxZNgoSRWSl_9LMGWhkqFPyTjeOMS19Lx_2__q21YHjOUjaIeiUccZv0_NOIVigpgR95byhNUQZLHBofLlB4nLDt00cd5csSSna9T7xHZWFyjF_cBbX1_aTRqXnALBgzdLytak1pBCzV690Lv1tkKJnY5-j0C0527k3mJ8GZ4juU-BmqBAne2zt5xRuSX7s4"/>
+</div>
+<div class="col-span-1 aspect-square rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="The underside of a rare reptile showing unique pattern variations and healthy ventral scales. The lighting is bright and scientific, allowing for detailed inspection of the morph characteristics. Pristine white studio environment with a high-end corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWeMuw2K_t0bHXiw3hh-ZPCber5hwvPrWC53vmYz9DtaOIYZODsC4KGLLx16q4kiOnp-ulru6oYZ6WtQpEOxum24yhBqr2saXJQrK7OtGe1alxTTgsSohJW6cPFHuVkXZm7U_5EeomJrguC0FF3miyFqvk_pOhs0x5DY2roO1I9peCm_azjYTvTJXhu-sGDIPNKf40BM_pioLJ5pOttSve5o6Z-Y5b96mDIUY8NshCE7WuNHey9mjtRm9m7tsx8Mb54ydfUVcgrag"/>
+</div>
+<div class="col-span-1 aspect-square rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A medium shot of a specimen snake stretched across a clean, minimalist measuring board to demonstrate size and condition. Professional herpetology equipment is visible in a clean, high-end breeder facility. The atmosphere is professional, sterile, and authoritative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD4HCdb-eXa3QeerVu4Bii6_w9-oNCDjCRSkwaLe3jS5ZGpibIdckrmnpHliZnjWrAGXe3A5pwsIX7QNeG4bfyUg1bsZFJ3pWgBzp-wfkUl-dN5G-PrSempm9vS_zLuSlZcBPUv-eC5iZyO1nB48nzYkNFTHi42nD17f-E42CeD65d5eEvK8tgxZwyIlU36icvJbRlu0xQyIJp6ZqWwk0-0rXEYPuuXwTlGjruBM3RJzR9_Uu-G_KnGJnnH--okT29YFTD9T3MH3Q"/>
+</div>
+<div class="col-span-1 aspect-square rounded-lg overflow-hidden relative cursor-pointer group">
+<div class="absolute inset-0 bg-primary/40 flex items-center justify-center text-on-primary group-hover:bg-primary/60 transition-colors">
+<span class="font-headline-md">+12</span>
+</div>
+<img class="w-full h-full object-cover" data-alt="A textured close-up of snake skin, focusing on the overlap and rhythmic pattern of the scales. The colors are deep greens and earthy browns, presented as abstract fine art photography. Clean, modern, and high-end aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNc87HistbLYLRRMk2m3Ig-RfyVyiNee6JL8X7A-7_VI7gTfVzITg8kA4QfZkqsRFs3FjWx10o7TvwN446zX3vqoG8v3K7zjyCZdmiresuACIjGFTqIYerrD7SgiaThgQjRF7_qRexDbB7dlpUW26-mckGku9DhcTywmW7UGNgkVtZwmb55EzAEumpZMrheEgrr7citclKNAcpET8i3LGqFvJfp7H1pa52NklCxVLXHKDws5ROEYNLIq_7dZAdy6bpLpieChGoZtQ"/>
+</div>
+</div>
+<!-- Right: Identity & Specs -->
+<div class="lg:col-span-5 space-y-8 sticky top-24">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full font-label-sm text-label-sm">AVAILABLE</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">REF: #772-Viper</span>
+</div>
+<h2 class="font-display text-display leading-tight">Nebula Blue Morph</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Exclusive 2023 clutch from the Obsidian x Azure lineage.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 rounded-xl border border-outline-variant bg-surface-container-low">
+<span class="block text-on-surface-variant font-label-sm text-label-sm uppercase mb-1">Gender</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">male</span>
+<span class="font-headline-md">Male</span>
+</div>
+</div>
+<div class="p-4 rounded-xl border border-outline-variant bg-surface-container-low">
+<span class="block text-on-surface-variant font-label-sm text-label-sm uppercase mb-1">Age</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">event</span>
+<span class="font-headline-md">1.5 Years</span>
+</div>
+</div>
+<div class="p-4 rounded-xl border border-outline-variant bg-surface-container-low">
+<span class="block text-on-surface-variant font-label-sm text-label-sm uppercase mb-1">Length</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">straighten</span>
+<span class="font-headline-md">42 Inches</span>
+</div>
+</div>
+<div class="p-4 rounded-xl border border-outline-variant bg-surface-container-low">
+<span class="block text-on-surface-variant font-label-sm text-label-sm uppercase mb-1">Weight</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">monitor_weight</span>
+<span class="font-headline-md">840g</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 pt-4">
+<div class="flex items-end justify-between">
+<div>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Market Valuation</span>
+<p class="text-headline-lg font-headline-lg text-primary">$4,250.00</p>
+</div>
+<span class="text-on-surface-variant font-body-md italic pb-1">Tax included</span>
+</div>
+<button class="w-full bg-secondary text-on-secondary font-headline-md py-4 rounded-xl active:scale-95 transition-transform flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">send</span>
+                        Contact Breeder
+                    </button>
+<button class="w-full border-2 border-primary text-primary font-headline-md py-4 rounded-xl hover:bg-primary/5 transition-colors">
+                        Download PDF Pedigree
+                    </button>
+</div>
+</div>
+</div>
+<!-- Detailed Sections -->
+<div class="mt-20 grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Left Side: Genetics & History -->
+<div class="md:col-span-7 space-y-16">
+<section>
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-primary">dns</span>
+<h3 class="font-display text-headline-lg">Genetics</h3>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 border-b border-outline-variant">
+<span class="font-headline-md">Visual Morph</span>
+<span class="font-data-point text-data-point bg-primary-container text-on-primary-container px-3 py-1 rounded">Super Phantom</span>
+</div>
+<div class="flex items-center justify-between p-4 border-b border-outline-variant">
+<span class="font-headline-md">Heterozygous (Het)</span>
+<span class="font-data-point text-data-point bg-surface-container-high text-on-surface-variant px-3 py-1 rounded">100% Albino, 50% Pied</span>
+</div>
+<div class="flex items-center justify-between p-4 border-b border-outline-variant">
+<span class="font-headline-md">Provenance</span>
+<span class="font-body-md">Captive Bred (F2 Generation)</span>
+</div>
+<p class="font-body-md text-on-surface-variant leading-relaxed pt-4">
+                            This specimen exhibits a unique expression of the Nebula trait, characterized by deep indigo iridescence that becomes more pronounced after each shed. The genetic stability of this line has been verified across three breeding seasons.
+                        </p>
+</div>
+</section>
+<section>
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-primary">history</span>
+<h3 class="font-display text-headline-lg">Specimen History</h3>
+</div>
+<div class="space-y-6">
+<div class="relative pl-8 border-l-2 border-primary/20">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary"></div>
+<span class="font-label-sm text-primary mb-1 block">OCT 2023</span>
+<h4 class="font-headline-md mb-2">Last Successful Shed</h4>
+<p class="text-on-surface-variant">Clean, full shed (1 piece). Current weight recorded at 840g post-shed.</p>
+</div>
+<div class="relative pl-8 border-l-2 border-primary/20">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-outline"></div>
+<span class="font-label-sm text-on-surface-variant mb-1 block">AUG 2023</span>
+<h4 class="font-headline-md mb-2">Transferred to Main Gallery</h4>
+<p class="text-on-surface-variant">Specimen reached breeding maturity weight. Evaluated for marketplace listing.</p>
+</div>
+<div class="relative pl-8 border-l-2 border-primary/20">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-outline"></div>
+<span class="font-label-sm text-on-surface-variant mb-1 block">MAY 2022</span>
+<h4 class="font-headline-md mb-2">Hatch Date</h4>
+<p class="text-on-surface-variant">Clutch #BP-2022-09. Healthy hatchling, first meal (frozen/thawed) accepted day 10.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Side: Family Tree -->
+<div class="md:col-span-5">
+<div class="bg-surface-container-low rounded-2xl p-8 border border-outline-variant shadow-sm h-full">
+<div class="flex items-center gap-4 mb-10">
+<span class="material-symbols-outlined text-primary">account_tree</span>
+<h3 class="font-display text-headline-lg">Lineage Pedigree</h3>
+</div>
+<div class="relative flex flex-col items-center gap-16">
+<!-- Sire -->
+<div class="w-full relative">
+<a class="group block p-4 bg-white rounded-xl border-l-4 border-primary shadow-sm hover:shadow-md transition-all" href="#">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A majestic male snake with deep black and obsidian scales, showing aggressive but clean morph lines. Professional animal portraiture with dramatic lighting to showcase muscularity and size. White studio background with soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApZfbaXD-xMgvjGBzwfEHvfnUoolYWHUaFI-7x0ISRNP57QqVOipnWCKFIVZEgbx7unPd3iIjzfBxRw4-MQH22giZr99Rqyq0TihYrIwuVts4OMQBee109PDU_hrxfyoVGz11M1jEv67bjAtnJCEBFDxbrZmpxSc3M5PNmvG6vbUBOFfO3Wa4aMPtQGgUlmVwQwZGT8nzkC4M1TjWIkEYHHt5v3V2N1UOi7y5XNAwrz5A7P1-3sa5wZ-fS8ov7D_hrTKVdiK1KLeY"/>
+</div>
+<div>
+<span class="font-label-sm text-primary uppercase">Sire (Father)</span>
+<h4 class="font-headline-md group-hover:text-secondary transition-colors">Obsidian Prime</h4>
+<span class="text-on-surface-variant text-label-sm font-data-point">Morph: Super Black Pastel</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+</a>
+<!-- Connector lines -->
+<div class="absolute -bottom-10 left-1/2 w-px h-10 bg-outline-variant"></div>
+</div>
+<!-- Current Subject (Highlighted) -->
+<div class="w-4/5 z-10">
+<div class="p-4 bg-secondary-container text-on-secondary-container rounded-xl border border-secondary shadow-[0px_4px_20px_rgba(115,92,0,0.15)] text-center ring-2 ring-secondary ring-offset-4 ring-offset-surface-container-low">
+<span class="font-label-sm uppercase opacity-70">Viewing Specimen</span>
+<h4 class="font-headline-md">Nebula Blue Morph</h4>
+</div>
+</div>
+<!-- Dam -->
+<div class="w-full relative">
+<!-- Connector lines -->
+<div class="absolute -top-10 left-1/2 w-px h-10 bg-outline-variant"></div>
+<a class="group block p-4 bg-white rounded-xl border-l-4 border-primary shadow-sm hover:shadow-md transition-all" href="#">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A beautiful female snake with shimmering iridescent scales in shades of blue and violet. High-end specimen photography emphasizing the sheen and color depth. Professional lighting in a clean breeder facility environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxD7wUE5knaV7F1jgw5LxoE0m1fvT-gzPHtyxFUT2uuKQU8HtwL17HWSsTw32Nmk163uHRHNNqBKXyS6mrS5n7iMmGJ-qLWWCUDCqP_KignOUpx9pERLfg8rmcQvkrvNH7Uh0Exsox3MazR5_fXEyUibeKfYiscM4y3YqwDxrRZ5fPn6NLIL2ADZL44xsG-yHu3AdT8kOC5eeJJEomYivN5iSsGZbJpbWW-05Mx_U9CpBFvxnW9LGiHBTjp6nkEzCO020bqQUNncg"/>
+</div>
+<div>
+<span class="font-label-sm text-primary uppercase">Dam (Mother)</span>
+<h4 class="font-headline-md group-hover:text-secondary transition-colors">Azure Queen</h4>
+<span class="text-on-surface-variant text-label-sm font-data-point">Morph: Mystic Potion</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+</a>
+</div>
+<div class="pt-8 text-center">
+<button class="text-primary font-body-md underline decoration-primary/30 hover:decoration-primary transition-all">
+                                View Full Ancestry Graph (5 Generations)
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-primary-container dark:bg-primary-container border-t border-primary">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-4">
+<h2 class="font-display text-headline-lg text-on-primary-container">Scales &amp; Shells</h2>
+<p class="text-on-primary-container opacity-80 font-body-md">The world's premier platform for high-end herpetology and elite specimen trade.</p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-on-primary-container font-bold mb-2">Directory</h4>
+<a class="text-on-primary-container opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-opacity font-label-sm" href="#">Breeder Directory</a>
+<a class="text-on-primary-container opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-opacity font-label-sm" href="#">Herpetology Resources</a>
+<a class="text-on-primary-container opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-opacity font-label-sm" href="#">Marketplace Rules</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-on-primary-container font-bold mb-2">Support</h4>
+<a class="text-on-primary-container opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-opacity font-label-sm" href="#">Community Guidelines</a>
+<a class="text-on-primary-container opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-opacity font-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-primary-container opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-opacity font-label-sm" href="#">Shipping Information</a>
+</div>
+<div class="space-y-4">
+<h4 class="text-on-primary-container font-bold">Newsletter</h4>
+<div class="flex border-b border-on-primary-container/30 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-on-primary-container placeholder:text-on-primary-container/50 w-full" placeholder="Your email" type="email"/>
+<button class="text-on-primary-container">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<p class="text-on-primary-container opacity-60 text-[12px]">© 2024 Serpent Gallery. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Navigation -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-16 px-2 bg-surface-container-lowest dark:bg-surface-container-low shadow-[0px_-4px_20px_rgba(27,48,34,0.04)] z-50 rounded-t-full">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">visibility</span>
+<span class="font-label-sm text-label-sm">Gallery</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-sm text-label-sm">Market</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interactions for the gallery
+        document.querySelectorAll('.lg\\:col-span-7 img').forEach(img => {
+            img.addEventListener('click', () => {
+                // In a real app, this would trigger a lightbox
+                img.style.transform = 'scale(1.02)';
+                setTimeout(() => img.style.transform = 'scale(1)', 200);
+            });
+        });
+    </script>
+</body></html>
